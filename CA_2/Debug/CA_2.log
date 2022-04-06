@@ -1,0 +1,3 @@
+﻿  Vector.cpp
+C:\Users\User\source\repos\CA_2\CA_2\Vector.cpp(135): warning C4715: Vector::operator=: значение возвращается не при всех путях выполнения
+  CA_2.vcxproj -> C:\Users\User\source\repos\CA_2\Debug\CA_2.exe
