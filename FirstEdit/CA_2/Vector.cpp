@@ -112,19 +112,10 @@ void Vector::insert_2(int h, int k) {
 
 void Vector::erase(int h) {
 
-	if(this->capacity > this->size){
-		for (int i = h; i < this->size; ++i) {
-			this->data[i] = this->data[i + 1];
-		}
-		this->size--;
+	for (int i = h; i < this->size; ++i) {
+		this->data[i] = this->data[i + 1];
 	}
-	else {
-		for (int i = h; i < this->size - 1; ++i) {
-			this->data[i] = this->data[i + 1];
-		}
-		this->data[size - 1] = 0;
-		this->size--;
-	}
+	this->size--;
 }
 
 Vector& Vector::operator=(const Vector& v){
@@ -139,4 +130,13 @@ Vector& Vector::operator=(const Vector& v){
 	for (int i = 0; i < this->size; ++i) {
 		this->data[i] = v.data[i];
 	}
+}
+
+std::ostream& operator<<(std::ostream& obj, const Vector& v){
+
+	for (int i = 0; i < v.size; ++i) {
+		obj << v.data[i] << " ";
+	}
+	std::cout << std::endl;
+	return obj;
 }

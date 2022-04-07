@@ -15,6 +15,10 @@ int main() {
 	a.print();
 	a.insert_2(5, 6);
 	a.print();
+	a.erase(0);
+	a.print();
+
+	std::cout << a;
 
 	return 0;
 }

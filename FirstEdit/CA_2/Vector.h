@@ -25,4 +25,6 @@ public:
 	void insert_1(int h, int k);
 	void insert_2(int h, int k);
 	void erase(int h);
+	friend std::ostream& operator<<(std::ostream& obj, const Vector& v);
+
 };
